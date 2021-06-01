@@ -13,23 +13,20 @@ export const quizzesSlice = createSlice({
         }
     }
 });
+
 // 'quizzes/addQuizIdsForTopicId'
 export const addQuizIdsForTopicId = (quiz) => {
     const { topicId, quizId } = quiz;
     return dispatch => {
         // const quizzes = addQuizIdsForTopic(quiz);
         dispatch(quizzesSlice.actions.addQuiz(quiz));
-        dispatch(addQuizIdsForTopic({ topicId: topicId, quizId: quizId }))
+        dispatch(addQuizIdsForTopic({ topicId: topicId, quizId: quizId }));
     }
 }
 
-// export const addQuizForTopicId = (quiz) => {
-//     const { topicId, id } = quiz;
-//     return (dispatch) => {
-//       dispatch(quizzesSlice.actions.addQuiz(quiz));
-//       dispatch(addQuizIdForTopic({ topicId: topicId, quizId: id }));
-//     };
-//   };
+
+
+
 
 export const { addQuiz } = quizzesSlice.actions;
 export const selectQuiz = state => state.quizzes.quizzes;
