@@ -7,6 +7,6 @@ export default configureStore({
   reducer: {
     topics: topicsReducer,
     quizzes: quizzesReducer,
-    cards: cardsReducer
+    cards: cardsReducer,
   },
 });
